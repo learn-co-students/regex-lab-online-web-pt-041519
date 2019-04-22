@@ -30,12 +30,6 @@ end
 
 # Return true for valid phone numbers, regardless of formatting
 def valid_phone_number?(phone)
-  binding.pry
-  if phone.split().match(\d{10}) != nil
-    return true
-  else
-    return false
-  end 
-      # valid_numbers = ["2438894546", "(718)891-1313", "234 435 9978", "(800)4261134"]
-      # invalid_numbers = ["28894546", "(718)891-13135", "234 43 9978", "(800)IloveNY"]
+  return false if phone.match(/\W?\d{3}\W?\d{3}\W?\d{4}$/) == nil
+  return true
 end
