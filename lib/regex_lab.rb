@@ -30,6 +30,7 @@ end
 
 # Return true for valid phone numbers, regardless of formatting
 def valid_phone_number?(phone)
+  binding.pry
   if phone.split().match(\d{10}) != nil
     return true
   else
