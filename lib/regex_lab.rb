@@ -19,9 +19,5 @@ end
 def valid_phone_number?(phone)
     return_value = phone.scan(/[0-9]{10}|[(]\d{3}[)]\d{3}[-]\d{4}\b|\d{3} \d{3} \d{4}|[(]\d{3}[)]\d{7}/)
     final_value = return_value.join
-    if final_value == phone
-      true
-    else
-      false
-    end
+    final_value == phone
 end
